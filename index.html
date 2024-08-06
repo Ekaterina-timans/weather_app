@@ -8,7 +8,41 @@
     <title>Weather app</title>
 </head>
 <body>
-    
+    <div class="weather">
+        <div class="weather__container">
+            <div class="weather__bar">
+                <div class="weather__panel-left">
+                    <div class="weather__geolocation">
+                        <i class="bx bx-map weather__geolocation-icon"></i>
+                        <span class="weather__geolocation-name"></span>
+                    </div>
+                    <div>
+                        <div class="weather__degrees-toggle">
+                            <i class="weather__degrees-indicator"></i>
+                            <span class="weather__degrees-value celsius">℃</span>
+                            <span class="weather__degrees-value fahrenheit">℉</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather__panel-right">
+                    <div class="weather__theme-btn">
+                        <label class="weather__btn">
+                            <input class="weather__checkbox" type="checkbox">
+                            <box-icon class="weather__sun" type='solid' name='sun' color="#fff"></box-icon>
+                            <box-icon class="weather__moon" type='solid' name='moon' color="#fff"></box-icon>
+                            <span class="weather__toggle"></span>
+                        </label>
+                    </div>
+                    <div class="weather__search">
+                        <i class="bx bx-search weather__search-icon"></i>
+                        <input class="weather__search-input" type="text" placeholder="Search city">
+                        <div class="weather__close-btn">&times;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="script/script.js"></script>
 </body>
