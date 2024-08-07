@@ -20,3 +20,5 @@ import './images/temperature.svg';
 import './images/thunderstorm.svg';
 import './images/wind.svg';
 import './images/windy.svg';
+
+const apiKey = process.env.API_KEY;

@@ -236,5 +236,145 @@ body {
                 }
             }
         }
+
+        .weather__forecast {
+            display: flex;
+            flex: 1 2;
+            align-items: center;
+            height: auto;
+            flex-wrap: wrap;
+
+            &-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30%;
+
+                .weather__item {
+                    width: 300px;
+                    height: 280px;
+                    border: 1px solid var(--color-accent);
+                    background-color: var(--color-card);
+                    backdrop-filter: blur(10px);
+                    border-radius: 20px;
+                    box-shadow: 5px 5px 10px 0px var(--color-dark);
+
+                    .weather__header-item {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        height: 40px;
+                        font-size: 19px;
+                        font-weight: 500;
+                    }
+
+                    .weather__temperature-item {
+                        height: 130px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .weather__degress-item {
+                            font-size: 50px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .weather__description {
+                        display: flex;
+                        justify-content: center;
+                        height: 20%;
+                        align-items: start;
+                        color: var(--color-font);
+                    }
+
+                    .weather__navigation-item {
+                        font-size: 19px;
+                        font-weight: 500;
+                        display: flex;
+                        justify-content: center;
+
+                        .weather__navigation {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .weather__block {
+                display: flex;
+                justify-content: center;
+                width: 70%;
+                height: 300px;
+
+                .weather__forecast-block {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 90%;
+
+                    .weather__arrow-left,
+                    .weather__arrow-right {
+                        display: none;
+
+                        &.disabled {
+                            color: var(--color-arrow);
+                            pointer-events: none;
+                        }
+                    }
+
+                    .weather__forecast-carousel {
+                        width: 100%;
+                        height: 100%;
+
+                        .weather__forecast-cards {
+                            display: flex;
+                            justify-content: center;
+                            min-width: 1100px;
+                            height: 100%;
+                            padding: 5px 0;
+                            gap: 25px;
+                            transition: transform 0.5s ease;
+
+                            .weather__forecast-card {
+                                display: flex;
+                                flex-direction: column;
+                                min-width: 180px;
+                                border: 2px solid var(--color-accent);
+                                height: 100%;
+                                border-radius: 10px;
+                                background-color: var(--color-card);
+                                backdrop-filter: blur(10px);
+
+                                .weather__date-week {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 5px 5px;
+                                    gap: 15px;
+                                    font-size: 17px;
+                                    border: 1px solid var(--color-accent);
+                                    height: 20%;
+                                }
+
+                                .weather__temperature {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border: 1px solid var(--color-accent);
+                                    height: 100%;
+
+                                    .weather__degress {
+                                        font-size: 30px;
+                                        margin-top: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
