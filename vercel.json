@@ -2,21 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "scripts/script.js",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist"
-        }
-      },
-      {
-        "src": "styles/style.less",
-        "use": "@vercel/static-build"
+        "src": "package.json",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/$1"
+        "dest": "/dist/$1"
       }
     ]
-  }
+}
