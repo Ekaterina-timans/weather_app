@@ -4,8 +4,8 @@
   "description": "Shows the weather for the current day and for five days ahead",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,10 @@
     "mini-css-extract-plugin": "^2.9.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.6.0"
   }
 }
