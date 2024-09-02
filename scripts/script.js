@@ -69,6 +69,7 @@ if (storedIsCelsius !== null) {
 const weatherGeolocationIcon = document.querySelector('.weather__geolocation-name');
 const searchInput = document.querySelector('.weather__search-input');
 const apiKey = process.env.API_KEY;
+console.log('API_KEY:', process.env.API_KEY);
 
 function getLocation() {
     if (navigator.geolocation) {
