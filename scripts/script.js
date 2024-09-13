@@ -118,7 +118,6 @@ function fetchData(latitude, longitude, city) {
             updateWindDirection(deg);
             const windDirection = getWindDirection(deg);
 
-            console.log(data.wind)
             let rain = data.rain ? data.rain['1h'] : 0;
             const {sunrise, sunset} = data.sys;
             const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
@@ -223,7 +222,6 @@ function fetchForecastData(latitude, longitude, city) {
         .then(response => response.json())
         .then(data => {
             if (data.cod != 200) {
-                console.log(data.cod)
                 console.error('Error:', data.message);
                 return;
             }
